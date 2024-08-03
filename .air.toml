@@ -1,11 +1,11 @@
 root = "."
 testdata_dir = "testdata"
-tmp_dir = "tmp"
+tmp_dir = "cmd/tmp"
 
 [build]
   args_bin = []
-  bin = "tmp\\main.exe"
-  cmd = "go build -o ./tmp/main.exe ."
+  bin = "cmd\\tmp\\main.exe"  # Output binary path
+  cmd = "go build -o ./cmd/tmp/main.exe ./cmd"  # Build command targeting cmd directory
   delay = 1000
   exclude_dir = ["assets", "tmp", "vendor", "testdata"]
   exclude_file = []
